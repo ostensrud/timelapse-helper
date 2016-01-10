@@ -85,7 +85,7 @@ sub resize
 sub make_movie
 {
   # make the movie
-  `avconv -y -q:v 3 -framerate 30 -i '$resize_folder/file_%4d.jpg' -vcodec libx264 $output_folder/output.mp4`
+  `avconv -y -q:v 3 -framerate 30 -i '$resize_folder/file_%4d.jpg' -vcodec libx264 $output_folder/$params{"PROJECT_NAME"}.mp4`
 }
 
 eval {
